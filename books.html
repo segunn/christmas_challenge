@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<!--
+	Paradigm Shift by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>S&C Christmas Challenge</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section class="intro">
+						<header>
+							<h1>Elf Library</h1>
+							<p>The library is usually a relaxing place to chill out between shifts in the workshop - but in the chaos all the films and books have lost their titles. </p>
+							<ul class="actions">
+								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+							</ul>
+						</header>
+						<div class="content">
+							<span class="image fill" data-position="center"><img src="images/books.jpeg" alt="" /></span>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section id="first">
+						<header>
+							<h2>Hints</h2>
+						</header>
+						
+						<div class="content">
+							<ul class="feature-icons">
+								<li class="icon solid fa-book">The jumbled text is an approximate plot summary</li>
+								<li class="icon solid fa-quote-right">You can ignore punctuation</li>
+								<li class="icon solid fa-key">Once you've identified the books and films, take one letter from each answer</li>
+								<li class="icon solid fa-unlock">Those letters spell out the answer you're looking for</li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section>
+						<header>
+							<h2>SHORT FRIENDS WHO HELP FIGHT ON: GILT O LEFT HERE</h2>
+						</header>
+						<div class="content">
+							<ul class="feature-icons">
+								<li class="icon solid fa-calendar">2003 film</li>
+								<li class="icon solid fa-ruler">3 4 2 3 5: 3 10 2 3 4</li>
+								<li class="icon solid fa-key">Last letter</li>
+							</ul>
+						</div>
+					</section>
+					<section>
+						<header>
+							<h2>CHEERY LARVA TRY LIGHT PRUNE</h2>
+						</header>
+						<div class="content">
+							<ul class="feature-icons">
+								<li class="icon solid fa-calendar">1969 book</li>
+								<li class="icon solid fa-ruler">3 4 6 11</li>
+								<li class="icon solid fa-key"> last letter</li>
+							</ul>
+						</div>
+					<section>
+						<header>
+							<h2>WINTER BEWITCHED. HERO: "HALT", AND HOT</h2>
+						</header>
+						<div class="content">
+							<ul class="feature-icons">
+								<li class="icon solid fa-calendar">1950 book</li>
+								<li class="icon solid fa-ruler">3 4 3 5 3 3 8</li>
+								<li class="icon solid fa-key"> last letter</li>
+							</ul>
+						</div>
+					<section>
+						<header>
+							<h2>SHOCK EARTH EXIT! THE GUY ALIGHT, HIDE</h2>
+						</header>
+						<div class="content">
+							<ul class="feature-icons">
+								<li class="icon solid fa-calendar">1979 book</li>
+								<li class="icon solid fa-ruler">3 11 5 2 3 6</li>
+								<li class="icon solid fa-key"> last letter</li>
+							</ul>
+						</div>
+					<section>
+						<header>
+							<h2>LOST FONDNESS UNTIL PM TRAIN, HE SEE SHE</h2>
+						</header>
+						<div class="content">
+							<ul class="feature-icons">
+								<li class="icon solid fa-calendar">2004 film</li>
+								<li class="icon solid fa-ruler">7 8 2 3 8 4</li>
+								<li class="icon solid fa-key"> last letter of first word</li>
+							</ul>
+						</div>
+					<section>
+						<header>
+							<h2>GEMS AND A REVENGE</h2>
+						</header>
+						<div class="content">
+							<ul class="feature-icons">
+								<li class="icon solid fa-calendar">2019 film</li>
+								<li class="icon solid fa-ruler">8: 7</li>
+								<li class="icon solid fa-key"> first letter</li>
+							</ul>
+						</div>
+					<section>
+						<header>
+							<h2>HE SCOWLS! TIGHT CON HEARS MIRTH</h2>
+						</header>
+						<div class="content">
+							<ul class="feature-icons">
+								<li class="icon solid fa-calendar">1966 film</li>
+								<li class="icon solid fa-ruler">3 3 6 5 9!</li>
+								<li class="icon solid fa-key"> first letter of third word</li>
+							</ul>
+						</div>
+					<section>
+						<header>
+							<h2>SCAR BOY DOTH CHARM THERE AFTER SERPENT</h2>
+						</header>
+						<div class="content">
+							<ul class="feature-icons">
+								<li class="icon solid fa-calendar">1998 book</li>
+								<li class="icon solid fa-ruler">5 6 3 3 7 2 7</li>
+								<li class="icon solid fa-key"> last letter</li>
+							</ul>
+						</div>
+
+				<!-- Section -->
+					<section>
+						<header>
+							<h2>Submit Answer</h2>
+						</header>
+						<div class="content">
+							<p><strong>What did you find</strong> while tidying the shelves?</p>
+							<div class="fields">
+								<div class="field half">
+									<input type="text" id="answer" placeholder="Answer..." />
+								</div>
+							</div>
+							<ul class="actions">
+								<li><button class="button primary" onclick="checkAnswer()">Check</button></li>
+							</ul>
+							<script>
+								function checkAnswer() {
+									var userAnswer = document.getElementById('answer').value.toLowerCase().replace(/[^\w]/g, '');
+									if (userAnswer === 'greylags') {
+										alert('HONK! Well done, greylags are the anser anser! You found one of the geese!');
+										localStorage.setItem("books", "solved");
+										displayAccurateProgress()
+									} else {
+										alert('Try again!');
+									}
+								}
+							</script>   
+						</div>
+					</section>
+
+					<!-- Section -->
+					<section id="progress">
+						<header>
+							<h2>Progress</h2>
+						</header>
+						<div class="content">
+							<p>You have found <span id="goose_count">0</span> geese-a-laying</p>
+							<ul class="actions">
+								<li><a href="map.html" class="button primary solid large">Back to map</a></li>
+								<li><a href="faqs.html" class="button large">FAQs</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Copyright -->
+					<div class="copyright">Puzzles: @segunn Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/progress.js"></script>
+
+	</body>
+</html>
