@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<!--
+	Paradigm Shift by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>S&C Christmas Challenge</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section class="intro">
+						<header>
+							<h1>Stocking Workshop</h1>
+							<p>Something strange is afoot! The workshop is a mess, there are socks <em>everywhere</em> and none of them are in their pairs.</p>
+							<ul class="actions">
+								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+							</ul>
+						</header>
+						<div class="content">
+							<span class="image fill" data-position="center"><img src="images/socks.jpeg" alt="" /></span>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section>
+						<header>
+							<h2>Maybe you can help pair them up?</h2>
+						</header>
+						<div class="content">
+							<p><strong>The first rule of sock pairing:</strong> every L has a corresponding R.</p>
+
+							<!-- Section -->
+								<section>
+									<header>
+										<h3>XHRCMJFV</h3>
+										<p>I've assigned a letter to each sock to help us identify them. If you can pair them up (using the first rule), maybe we can use the pairs to decode the strange message.</p>
+									</header>
+									<div class="content">
+										<div class="gallery">
+											<a href="images/gallery/socks/01.jpg"><img src="images/gallery/socks/01.jpg" alt="" /></a>
+											<a href="images/gallery/socks/02.jpg"><img src="images/gallery/socks/02.jpg" alt="" /></a>
+											<a href="images/gallery/socks/03.jpg"><img src="images/gallery/socks/03.jpg" alt="" /></a>
+											<a href="images/gallery/socks/04.jpg"><img src="images/gallery/socks/04.jpg" alt="" /></a>
+											<a href="images/gallery/socks/05.jpg"><img src="images/gallery/socks/05.jpg" alt="" /></a>
+											<a href="images/gallery/socks/06.jpg"><img src="images/gallery/socks/06.jpg" alt="" /></a>
+											<a href="images/gallery/socks/07.jpg"><img src="images/gallery/socks/07.jpg" alt="" /></a>
+											<a href="images/gallery/socks/08.jpg"><img src="images/gallery/socks/08.jpg" alt="" /></a>
+											<a href="images/gallery/socks/09.jpg"><img src="images/gallery/socks/09.jpg" alt="" /></a>
+											<a href="images/gallery/socks/10.jpg"><img src="images/gallery/socks/10.jpg" alt="" /></a>
+											<a href="images/gallery/socks/11.jpg"><img src="images/gallery/socks/11.jpg" alt="" /></a>
+											<a href="images/gallery/socks/12.jpg"><img src="images/gallery/socks/12.jpg" alt="" /></a>
+											<a href="images/gallery/socks/13.jpg"><img src="images/gallery/socks/13.jpg" alt="" /></a>
+											<a href="images/gallery/socks/14.jpg"><img src="images/gallery/socks/14.jpg" alt="" /></a>
+											<a href="images/gallery/socks/15.jpg"><img src="images/gallery/socks/15.jpg" alt="" /></a>
+											<a href="images/gallery/socks/16.jpg"><img src="images/gallery/socks/16.jpg" alt="" /></a>
+											<a href="images/gallery/socks/17.jpg"><img src="images/gallery/socks/17.jpg" alt="" /></a>
+											<a href="images/gallery/socks/18.jpg"><img src="images/gallery/socks/18.jpg" alt="" /></a>
+											<a href="images/gallery/socks/19.jpg"><img src="images/gallery/socks/19.jpg" alt="" /></a>
+											<a href="images/gallery/socks/20.jpg"><img src="images/gallery/socks/20.jpg" alt="" /></a>	
+											<a href="images/gallery/socks/21.jpg"><img src="images/gallery/socks/21.jpg" alt="" /></a>
+											<a href="images/gallery/socks/22.jpg"><img src="images/gallery/socks/22.jpg" alt="" /></a>
+											<a href="images/gallery/socks/23.jpg"><img src="images/gallery/socks/23.jpg" alt="" /></a>
+											<a href="images/gallery/socks/24.jpg"><img src="images/gallery/socks/24.jpg" alt="" /></a>
+											<a href="images/gallery/socks/25.jpg"><img src="images/gallery/socks/25.jpg" alt="" /></a>
+											<a href="images/gallery/socks/26.jpg"><img src="images/gallery/socks/26.jpg" alt="" /></a>											
+										</div>
+									</div>
+								</section>
+						</div>
+					</section>
+
+<!-- Section -->
+					<section>
+						<header>
+							<h2>Submit Answer</h2>
+						</header>
+						<div class="content">
+							<p><strong>What did you find</strong> while tidying the shelves?</p>
+							<div class="fields">
+								<div class="field half">
+									<input type="text" id="answer" placeholder="Answer..." />
+								</div>
+							</div>
+							<ul class="actions">
+								<li><button class="button primary" onclick="checkAnswer()">Check</button></li>
+							</ul>
+							<script>
+								function checkAnswer() {
+									var userAnswer = document.getElementById('answer').value.toLowerCase().replace(/[^\w]/g, '');
+									if (userAnswer === 'Egyptian') {
+										alert('HONK! Well done, you found one of the geese - but it insists on walking sideways...');
+										localStorage.setItem("socks", "solved");
+										displayAccurateProgress()
+									} else {
+										alert('Try again!');
+									}
+								}
+							</script>   
+						</div>
+					</section>
+
+					<!-- Section -->
+					<section id="progress">
+						<header>
+							<h2>🪿 Progress</h2>
+						</header>
+						<div class="content">
+							<p>You have found <span id="goose_count">0</span> geese-a-laying</p>
+							<ul class="actions">
+								<li><a href="map.html" class="button primary solid large">Back to map</a></li>
+								<li><a href="faqs.html" class="button large">FAQs</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Copyright -->
+					<div class="copyright">Puzzles: @segunn Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/progress.js"></script>
+	</body>
+</html>
