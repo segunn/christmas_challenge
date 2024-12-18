@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<!--
+	Paradigm Shift by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>S&C Christmas Challenge</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section class="intro">
+						<header>
+							<h1>Toy Workshop</h1>
+							<p>The elves have gone on strike! They're fed up with all the attention being on Rudolph, so they're refusing to go back to work until they've each got their own themesong.</p>
+							<ul class="actions">
+								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+							</ul>
+						</header>
+						<div class="content">
+							<span class="image fill" data-position="center"><img src="images/toys.jpeg" alt="" /></span>
+						</div>
+					</section>
+
+
+				<!-- Section -->
+					<section>
+						<header>
+							<h2>Can you identify each elf's favourite toy?</h2>
+						</header>
+						<div class="content">
+							<p><strong>Hints</strong> might go here?</p>
+
+							<!-- Section -->
+								<section>
+									<header>
+										<img src="images/elves/8.jpg" alt="" />
+									</header>
+									<div class="content">
+										<h3>Candy McCain, Letter Processor @ North Pole Mail Centre</h3>
+										<audio controls>
+											<source src="audio/CandyMcCain.mp3" type="audio/mpeg">
+										  Your browser does not support the audio element.
+										  </audio>
+									</div>
+								</section>
+							<!-- Section -->
+								<section>
+									<header>
+										<img src="images/elves/9.jpg" alt="" />
+									</header>
+									<div class="content">
+										<h3>Swizzels Matlow, Deep Toy Innovator @ North Pole R&D</h3>
+										<audio controls>
+											<source src="audio/SwizzelsMatlow.mp3" type="audio/mpeg">
+											Your browser does not support the audio element.
+											</audio>
+									</div>
+								</section>
+								<!-- Section -->
+								<section>
+									<header>
+										<img src="images/elves/11.jpg" alt="" />
+									</header>
+									<div class="content">
+										<h3>Flump Kerplunk, Toy Tester @ North Pole QA Dept</h3>
+										<audio controls>
+											<source src="audio/FlumpKerplunk.mp3" type="audio/mpeg">
+											Your browser does not support the audio element.
+											</audio>
+									</div>
+								</section>
+								<!-- Section -->
+								<section>
+									<header>
+										<img src="images/elves/14.jpg" alt="" />
+									</header>
+									<div class="content">
+										<h3>CherryPie Custard-Drizzle, Influencer @ North Pole Public Relations Team</h3>
+										<audio controls>
+											<source src="audio/CherryPie.mp3" type="audio/mpeg">
+											Your browser does not support the audio element.
+											</audio>
+									</div>
+								</section>
+								<!-- Section -->
+								<section>
+									<header>
+										<img src="images/elves/12.jpg" alt="" />
+									</header>
+									<div class="content">
+										<h3>Truffle Wishbone, Advanced Gift Wrapper @ Awkwardly Shaped Toy Department</h3>
+										<audio controls>
+											<source src="audio/CarmelitaSwirl.mp3" type="audio/mpeg">
+											Your browser does not support the audio element.
+											</audio>
+									</div>
+								</section>
+						</div>
+
+					</section>
+
+<!-- Section -->
+					<section>
+						<header>
+							<h2>Submit Answer</h2>
+						</header>
+						<div class="content">
+							<p><strong>Where did the elf songs</strong> send you?</p>
+							<div class="fields">
+								<div class="field half">
+									<input type="text" id="answer" placeholder="Answer..." />
+								</div>
+							</div>
+							<ul class="actions">
+								<li><button class="button primary" onclick="checkAnswer()">Check</button></li>
+							</ul>
+							<script>
+								function checkAnswer() {
+									var userAnswer = document.getElementById('answer').value.toLowerCase().replace(/[^\w]/g, '');
+									if (userAnswer === 'front') {
+										alert('HONK! Well done, in front of the workhouse you found one of the geese!');
+										localStorage.setItem("toys", "solved");
+										displayAccurateProgress()
+									} else {
+										alert('Try again!');
+									}
+								}
+							</script>   
+						</div>
+					</section>
+
+					<!-- Section -->
+					<section id="progress">
+						<header>
+							<h2>🪿 Progress</h2>
+						</header>
+						<div class="content">
+							<p>You have found <span id="goose_count">0</span> out of 6 geese-a-laying</p>
+							<ul class="actions">
+								<li><a href="map.html" class="button primary solid large">Back to map</a></li>
+								<li><a href="faqs.html" class="button large">FAQs</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Copyright -->
+					<div class="copyright">Puzzles: @segunn Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/progress.js"></script>
+	</body>
+</html>
