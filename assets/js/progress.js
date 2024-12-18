@@ -24,6 +24,7 @@ function checkIfSolved() {
         if (val === "solved"){
             const links = document.getElementById(x + "_link")
             links.classList.add("fa-egg")
+            links.classList.remove("fa-socks", "fa-sleigh", "fa-book", "fa-hammer", "fa-snowflake", "fa-bed")
             links.classList.add("primary")
         }
     })
