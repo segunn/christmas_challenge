@@ -41,7 +41,8 @@
 						<div class="content">
 							<p><strong>Each song</strong> contains clues to that elf's favourite toy.</p>
 							<p>Once you've found <strong>all 5 toys</strong>, take the first letter of the first, the second of the second, and so on.</p>
-
+							<p>You can check the individual toys by submitting them in the answer box too</p>
+							
 							<!-- Section -->
 								<section>
 									<header>
@@ -136,12 +137,15 @@
 								function checkAnswer() {
 									var userAnswer = document.getElementById('answer').value.toLowerCase().replace(/[^\w]/g, '');
 									if (userAnswer === 'front') {
-										alert('HONK! Well done, in front of the workhouse you found one of the geese!');
+										alert('HONK! Well done, in front of the workshop you found one of the geese!');
 										localStorage.setItem("toys", "solved");
 										displayAccurateProgress()
+									} else if (userAnswer === "furby" || userAnswer === "train" || userAnswer === "drone" || userAnswer === "sword" || userAnswer === "robot") {
+										alert('Yes, that is one of the favourite toys - keep going!')
 									} else {
 										alert('Try again!');
 									}
+									document.getElementById('answer').value = ''
 								}
 							</script>   
 						</div>
