@@ -21,42 +21,55 @@
 				<!-- Intro -->
 					<section class="intro">
 						<header>
-							<h1>Map</h1>
-							<p>Welcome to the North Pole! Feel free to explore...</p>
+							<h1>Snowglobe Testing</h1>
+							<p>Those Tree-Rexes have made such a mess, we can't even see inside some of the snowglobes.</p>
 							<ul class="actions">
 								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
 							</ul>
 						</header>
 						<div class="content">
-							<span class="image fill" data-position="center"><img src="images/map.jpeg" alt="" /></span>
+							<span class="image fill" data-position="center"><img src="images/globes.jpeg" alt="" /></span>
 						</div>
 					</section>
 
 				<!-- Section -->
 					<section id="first">
 						<header>
-							<h2>Locations</h2>
+							<h2>Can you work out what this snowglobe is about?</h2>
 						</header>
 						<div class="content">
-							<p><strong>Visit each location</strong> to help an elf - and perhaps you'll find a goose?</p>
+							<p>I just can't <strong>shake</strong> the feeling it had an important message for us.</p>
+							<span class="image main"><img src="images/snowglobe.png" alt="" /></span>
+						</div>
+					</section>
+
+<!-- Section -->
+					<section>
+						<header>
+							<h2>Submit Answer</h2>
+						</header>
+						<div class="content">
+							<p><strong>What did you find</strong> within the snowglobe?</p>
+							<div class="fields">
+								<div class="field half">
+									<input type="text" id="answer" placeholder="Answer..." />
+								</div>
+							</div>
 							<ul class="actions">
-								<li><a href="socks.html" id="socks_link" class="button icon solid large fa-socks">Stocking Workshop</a></li>
+								<li><button class="button primary" onclick="checkAnswer()">Check</button></li>
 							</ul>
-							<ul class="actions">								
-								<li><a href="stables.html" id="stables_link" class="button icon solid large fa-sleigh">Reindeer Stables</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="books.html" id="books_link" class="button icon solid large fa-book">Elf Library</a></li>
-							</ul>
-							<ul class="actions">								
-								<li><a href="toys.html" id="toys_link" class="button icon solid large fa-hammer">Toy Factory</a></li>
-							</ul>
-							<ul class="actions">								
-								<li><a href="globes.html" id="globes_link" class="button icon solid large fa-snowflake">Snowglobe Testing</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="bunks.html" id="bunks_link" class="button icon solid large fa-bed">Elf Dorms</a></li>
-							</ul>
+							<script>
+								function checkAnswer() {
+									var userAnswer = document.getElementById('answer').value.toLowerCase().replace(/[^\w]/g, '');
+									if (userAnswer === 'bird') {
+										alert("HONK! You're not trash, man! You found a goose!");
+										localStorage.setItem("globes", "solved");
+										displayAccurateProgress()
+									} else {
+										alert('Try again!');
+									}
+								}
+							</script>   
 						</div>
 					</section>
 
@@ -68,12 +81,11 @@
 						<div class="content">
 							<p>You have found <span id="goose_count">0</span> out of 6 geese-a-laying</p>
 							<ul class="actions">
-								<li><a href="index.html" class="button primary solid large">Back to intro</a></li>
+								<li><a href="map.html" class="button primary solid large">Back to map</a></li>
 								<li><a href="faqs.html" class="button large">FAQs</a></li>
 							</ul>
 						</div>
 					</section>
-
 
 				<!-- Copyright -->
 					<div class="copyright">Puzzles: Sarah. CSS Template <a href="https://html5up.net">HTML5 UP</a>.</div>
@@ -88,9 +100,5 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/progress.js"></script>
-			<script>
-				checkIfSolved()
-			</script>
-
 	</body>
 </html>
