@@ -21,69 +21,72 @@
 				<!-- Intro -->
 					<section class="intro">
 						<header>
-							<h1>Snowglobe Testing</h1>
-							<p>Those Tree-Rexes have made such a mess, we can't even see inside some of the snowglobes.</p>
+							<h1>Festively Asked Questions</h1>
+							<p>If you've got a question, there might be an answer here</p>
 							<ul class="actions">
 								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
 							</ul>
 						</header>
 						<div class="content">
-							<span class="image fill" data-position="center"><img src="images/globes.jpeg" alt="" /></span>
+							<span class="image fill" data-position="center"><img src="images/faqs.jpeg" alt="" /></span>
 						</div>
 					</section>
 
 				<!-- Section -->
 					<section id="first">
 						<header>
-							<h2>Can you work out what this snowglobe is about?</h2>
+							<h2>Is this page a puzzle?</h2>
 						</header>
 						<div class="content">
-							<p>I just can't <strong>shake</strong> the feeling it had an important message for us.</p>
-							<span class="image main"><img src="images/snowglobe.png" alt="" /></span>
+							<p><strong>No</strong>.</p>
 						</div>
 					</section>
 
-<!-- Section -->
+				<!-- Section -->
 					<section>
 						<header>
-							<h2>Submit Answer</h2>
+							<h2>Why am I here?</h2>
 						</header>
 						<div class="content">
-							<p><strong>What did you find</strong> within the snowglobe?</p>
-							<div class="fields">
-								<div class="field half">
-									<input type="text" id="answer" placeholder="Answer..." />
-								</div>
+							<p>Help with the clear up from the Tree-Rex issues. Find the six geese-a-laying. <strong>Save Christmas.</strong></p>
+							
+						</div>
+					</section>
+
+					<!-- Section -->
+						<section>
+							<header>
+								<h2>What if I get stuck?</h2>
+							</header>
+							<div class="content">
+								<p>Reread the text on the puzzle page, there might be a hint at how to solve it.</p>
+								<p>Stop for a snack, go for a walk, talk to a friend.</p>
+								<p>You could also message Sarah for a hint!</p>
 							</div>
-							<ul class="actions">
-								<li><button class="button primary" onclick="checkAnswer()">Check</button></li>
-							</ul>
-							<script>
-								function checkAnswer() {
-									var userAnswer = document.getElementById('answer').value.toLowerCase().replace(/[^\w]/g, '');
-									if (userAnswer === 'bird') {
-										alert("HONK! You're not trash, man! You found a goose!");
-										localStorage.setItem("globes", "solved");
-										displayAccurateProgress()
-									} else {
-										alert('Try again!');
-									}
-									document.getElementById('answer').value = ''
-								}
-							</script>   
+						</section>
+
+
+					<!-- Section -->
+					<section>
+						<header>
+							<h2>What can I do?</h2>
+						</header>
+						<div class="content">
+							<p>You can use any resources at your disposal: google, pen and paper, an abacus, whatever.</p>
+							<p>You don't need to view the website sourcecode.</p>
 						</div>
 					</section>
 
 					<!-- Section -->
 					<section id="progress">
 						<header>
-							<h2>🪿 Progress</h2>
+							<h2>🪿 How am I doing?</h2>
 						</header>
 						<div class="content">
 							<p>You have found <span id="goose_count">0</span> out of 6 geese-a-laying</p>
 							<ul class="actions">
-								<li><a href="map.html" class="button primary solid large">Back to map</a></li>
-								<li><a href="faqs.html" class="button large">FAQs</a></li>
+								<li><a href="index.html" class="button primary solid large">Back to intro</a></li>
+								<li><a href="map.html" class="button large">To the map</a></li>
 							</ul>
 						</div>
 					</section>
