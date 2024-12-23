@@ -19,7 +19,7 @@ function displayAccurateProgress() {
         if (completion_message_already_shown === "true") {
             // do nothing
         } else {
-            alert("Nice work! You found all 6 geese and saved Christmas - thanks!")
+            alert("Nice work! You found all 6 geese and saved Christmas - phew!")
             localStorage.setItem("completed", "true")
         }            
     }
