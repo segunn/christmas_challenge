@@ -13,6 +13,16 @@ function displayAccurateProgress() {
     })
 
     prog.innerHTML = solved_puzzle_count
+
+    if (solved_puzzle_count == 6) {
+        const completion_message_already_shown = localStorage.getItem("completed")
+        if (completion_message_already_shown === "true") {
+            // do nothing
+        } else {
+            alert("Nice work! You found all 6 geese and saved Christmas - thanks!")
+            localStorage.setItem("completed", "true")
+        }            
+    }
 }
 
 
