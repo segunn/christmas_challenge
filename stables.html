@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<!--
+	Paradigm Shift by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>S&C Christmas Challenge</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section class="intro">
+						<header>
+							<h1>Reindeer stables</h1>
+							<p>The reindeer <em>should</em> be tucking into their nutritionally-balanced pre-flight dinner, but the tree-rex's tail knocked over the pans and spilt the stew. Can you recreate the secret recipe in time?</p>
+							<ul class="actions">
+								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+							</ul>
+						</header>
+						<div class="content">
+							<span class="image fill" data-position="center"><img src="images/stables.jpeg" alt="" /></span>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section id="first">
+						<header>
+							<h2>Step 1: find the 17 secret ingredients</h2>
+						</header>
+						<div class="content">
+							<span class="image main"><img src="images/wordsearch.png" alt="" /></span>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section>
+						<header>
+							<h2>Step 2: arrange the ingredients</h2>
+						</header>
+						<div class="content">
+							<span class="image main"><img src="images/grid.png" alt="" /></span>
+						</div>
+					</section>
+
+<!-- Section -->
+					<section>
+						<header>
+							<h2>Submit Answer</h2>
+						</header>
+						<div class="content">
+							<p><strong>What did you find</strong> in the reindeer meal?</p>
+							<div class="fields">
+								<div class="field half">
+									<input type="text" id="answer" placeholder="Answer..." />
+								</div>
+							</div>
+							<ul class="actions">
+								<li><button class="button primary" onclick="checkAnswer()">Check</button></li>
+							</ul>
+							<script>
+								function checkAnswer() {
+									var userAnswer = document.getElementById('answer').value.toLowerCase().replace(/[^\w]/g, '');
+									if (userAnswer === 'pilgrim') {
+										alert('HONK! Well done, the smells of your cooking attracted another goose!');
+										localStorage.setItem("stables", "solved");
+										displayAccurateProgress()
+									} else {
+										alert('Try again!');
+									}
+									document.getElementById('answer').value = ''
+								}
+							</script>   
+						</div>
+					</section>
+
+					<!-- Section -->
+					<section id="progress">
+						<header>
+							<h2>🪿 Progress</h2>
+						</header>
+						<div class="content">
+							<p>You have found <span id="goose_count">0</span> out of 6 geese-a-laying</p>
+							<ul class="actions">
+								<li><a href="map.html" class="button primary solid large">Back to map</a></li>
+								<li><a href="faqs.html" class="button large">FAQs</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Copyright -->
+					<div class="copyright">Puzzles: Sarah. CSS Template <a href="https://html5up.net">HTML5 UP</a>.</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/progress.js"></script>
+	</body>
+</html>
